@@ -13,6 +13,7 @@ import {
   BrainCircuit,
   Code2,
 } from "lucide-react";
+import Container from "@/components/Container";
 
 interface Experience {
   role: string;
@@ -117,7 +118,7 @@ const Experience = () => {
 
   return (
     <section id="experience" className="py-20 md:py-24 relative">
-      <div className="container mx-auto px-6">
+      <Container>
         <div className="mb-14">
           <motion.span
             initial={{ opacity: 0, x: -20 }}
@@ -230,7 +231,7 @@ const Experience = () => {
             );
           })}
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };

@@ -6,6 +6,7 @@ import Education from "@/components/sections/Education";
 import Experience from "@/components/sections/Experience";
 import Achievements from "@/components/sections/Achievements";
 import Contact from "@/components/sections/Contact";
+import Container from "@/components/Container";
 
 
 // Section divider component
@@ -42,11 +43,11 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-12 border-t border-white/10 text-center">
-        <div className="container mx-auto px-6">
+        <Container>
           <p className="text-sm text-slate-400 font-mono tracking-widest uppercase">
             Designed & Built by <span className="text-accent-primary font-semibold">Satwik</span> • © 2026
           </p>
-        </div>
+        </Container>
       </footer>
     </div>
   );

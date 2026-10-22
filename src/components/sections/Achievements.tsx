@@ -25,6 +25,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { certs, CertItem, CertCategory } from "@/data/certs";
 import { achievements } from "@/data/achievements";
+import Container from "@/components/Container";
 
 type TabType = "achievements" | "certifications";
 type FilterCategory = "All" | CertCategory;
@@ -182,7 +183,7 @@ const Achievements = () => {
       id="achievements"
       className="scroll-mt-24 py-20 md:py-24 bg-slate-950/30 relative"
     >
-      <div className="container mx-auto px-6">
+      <Container>
         {/* Section Heading */}
         <div className="mb-12 text-center">
           <motion.span
@@ -607,7 +608,7 @@ const Achievements = () => {
             </motion.div>
           )}
         </div>
-      </div>
+      </Container>
 
       {/* Lightbox Modal with focus trap, escape key, and click-outside close */}
       <AnimatePresence>

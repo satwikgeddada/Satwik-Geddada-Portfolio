@@ -4,6 +4,7 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import { GraduationCap, BookOpen, Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Container from "@/components/Container";
 
 interface EducationItem {
   degree: string;
@@ -61,7 +62,7 @@ const Education = () => {
 
   return (
     <section id="education" className="py-20 md:py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6 max-w-5xl">
+      <Container>
         <div className="mb-14">
           <motion.span
             initial={{ opacity: 0, x: -20 }}
@@ -145,7 +146,7 @@ const Education = () => {
             ))}
           </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

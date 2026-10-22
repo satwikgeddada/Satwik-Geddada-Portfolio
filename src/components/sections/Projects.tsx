@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { ExternalLink, ArrowUpRight, Mail } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Container from "@/components/Container";
 
 // Custom Brand Icons (Re-defined for safety)
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
@@ -129,7 +130,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 md:py-24 relative overflow-hidden">
-      <div className="container mx-auto px-6">
+      <Container>
         <div className="mb-14">
           <motion.span
             initial={{ opacity: 0, x: -20 }}
@@ -278,7 +279,7 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };

@@ -6,6 +6,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { navItems } from "@/data/nav";
+import Container from "@/components/Container";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,10 +108,11 @@ const Navbar = () => {
           : "bg-[#020617]/50 backdrop-blur-sm border-b border-transparent"
       )}
     >
-      <nav
-        aria-label="Main"
-        className="container mx-auto px-6 h-20 flex md:grid md:grid-cols-[1fr_auto_1fr] items-center justify-between"
-      >
+      <Container>
+        <nav
+          aria-label="Main"
+          className="h-20 flex md:grid md:grid-cols-[1fr_auto_1fr] items-center justify-between"
+        >
         {/* Left: Logo */}
         <div className="justify-self-start flex items-center">
           <Link
@@ -197,6 +199,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
+    </Container>
 
       {/* Mobile Dropdown Panel: Slide-down + Fade below navbar */}
       <AnimatePresence>
@@ -210,32 +213,34 @@ const Navbar = () => {
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden bg-[#020617]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl md:hidden"
           >
-            <div className="container mx-auto px-6 py-4 flex flex-col divide-y divide-white/5">
-              {navItems.map((item) => {
-                const isActive = activeSection === item.href.substring(1);
-                return (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(item.href);
-                    }}
-                    className={cn(
-                      "min-h-[48px] flex items-center justify-between text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-md px-1",
-                      isActive
-                        ? "text-accent-primary font-semibold"
-                        : "text-slate-300 hover:text-white"
-                    )}
-                  >
-                    <span>{item.name}</span>
-                    {isActive && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-primary shadow-[0_0_6px_rgba(34,211,238,0.8)]" />
-                    )}
-                  </Link>
-                );
-              })}
-            </div>
+            <Container className="py-4">
+              <div className="flex flex-col divide-y divide-white/5">
+                {navItems.map((item) => {
+                  const isActive = activeSection === item.href.substring(1);
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleNavClick(item.href);
+                      }}
+                      className={cn(
+                        "min-h-[48px] flex items-center justify-between text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-md px-1",
+                        isActive
+                          ? "text-accent-primary font-semibold"
+                          : "text-slate-300 hover:text-white"
+                      )}
+                    >
+                      <span>{item.name}</span>
+                      {isActive && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-primary shadow-[0_0_6px_rgba(34,211,238,0.8)]" />
+                      )}
+                    </Link>
+                  );
+                })}
+              </div>
+            </Container>
           </motion.div>
         )}
       </AnimatePresence>

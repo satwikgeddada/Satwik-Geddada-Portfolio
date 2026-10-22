@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { Download, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Container from "@/components/Container";
 
 const techBadges = [
   { name: "Next.js", color: "bg-white/10" },
@@ -44,7 +45,7 @@ const Hero = () => {
       <div className="glow-bg top-1/4 left-1/4 w-[400px] h-[400px] bg-accent-primary" />
       <div className="glow-bg bottom-1/4 right-1/4 w-[300px] h-[300px] bg-accent-secondary" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -143,7 +144,7 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </Container>
 
       {/* Scroll Indicator */}
       <motion.div

@@ -30,7 +30,7 @@ html {
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    @apply selection:bg-accent-primary/30 antialiased;
+    @apply selection:bg-accent-primary/30 antialiased overflow-x-hidden;
   }
 }
 

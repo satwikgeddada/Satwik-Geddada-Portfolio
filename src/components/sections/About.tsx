@@ -11,6 +11,7 @@ import {
   Layers,
   ArrowRight,
 } from "lucide-react";
+import Container from "@/components/Container";
 
 const focusItems = [
   { icon: Brain, label: "Generative AI & LLM apps" },
@@ -122,7 +123,7 @@ const About = () => {
 
   return (
     <section id="about" className="relative py-20 md:py-24 overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
+      <Container className="relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -276,7 +277,7 @@ const About = () => {
             </div>
           </motion.div>
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };

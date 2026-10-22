@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Download, Copy, Check } from "lucide-react";
+import Container from "@/components/Container";
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg
@@ -71,7 +72,7 @@ const Contact = () => {
       id="contact"
       className="relative overflow-hidden py-20 md:py-24"
     >
-      <div className="container mx-auto px-6">
+      <Container>
         {/* Section Heading */}
         <div className="mb-12 text-center">
           <motion.span
@@ -220,7 +221,7 @@ const Contact = () => {
           {/* Decorative Glow */}
           <div className="pointer-events-none absolute -bottom-16 left-1/2 -z-10 h-64 w-64 -translate-x-1/2 rounded-full bg-accent-primary/10 blur-[100px]" />
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };

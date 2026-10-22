@@ -4,6 +4,7 @@ import React from "react";
 import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { skillCategories } from "@/data/skills";
+import Container from "@/components/Container";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -28,7 +29,7 @@ const Skills = () => {
       id="skills"
       className="bg-slate-950/40 py-20 md:py-24"
     >
-      <div className="container mx-auto px-6">
+      <Container>
         <div className="mb-14 text-center">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -116,7 +117,7 @@ const Skills = () => {
             );
           })}
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 };
