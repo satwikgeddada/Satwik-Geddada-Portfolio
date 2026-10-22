@@ -62,7 +62,7 @@ const Contact = () => {
   const handleCopyEmail = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    navigator.clipboard.writeText("satwik.geddada@gmail.com");
+    navigator.clipboard.writeText("satwik.geddada05@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -130,7 +130,7 @@ const Contact = () => {
                     Email Me
                   </p>
                   <p className="break-all text-sm sm:text-base font-medium text-foreground">
-                    satwik.geddada@gmail.com
+                    satwik.geddada05@gmail.com
                   </p>
                 </div>
               </div>
