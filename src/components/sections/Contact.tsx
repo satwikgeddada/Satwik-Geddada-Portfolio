@@ -117,7 +117,7 @@ const Contact = () => {
           {/* Email Card with Direct Copy Button */}
           <div className="relative mx-auto max-w-xl">
             <a
-              href="mailto:satwik.geddada@gmail.com"
+              href="mailto:satwik.geddada05@gmail.com"
               className="group flex items-center justify-between rounded-2xl border border-white/10 p-5 sm:p-6 text-left glass-card transition-all hover:border-accent-primary/40"
             >
               <div className="flex items-center min-w-0 pr-3">
